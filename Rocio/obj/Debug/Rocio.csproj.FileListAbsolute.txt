@@ -1,0 +1,11 @@
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\bin\Debug\Rocio.exe.config
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\bin\Debug\Rocio.exe
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\bin\Debug\Rocio.pdb
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\obj\Debug\Rocio.csproj.AssemblyReference.cache
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\obj\Debug\Rocio.csproj.SuggestedBindingRedirects.cache
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\obj\Debug\Rocio.Properties.Resources.resources
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\obj\Debug\Rocio.csproj.GenerateResource.cache
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\obj\Debug\Rocio.csproj.CoreCompileInputs.cache
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\obj\Debug\Rocio.exe
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\obj\Debug\Rocio.pdb
+C:\Users\deveb\source\repos\elecbug\Rocio\Rocio\obj\Debug\Rocio.Resources.TextENG.resources

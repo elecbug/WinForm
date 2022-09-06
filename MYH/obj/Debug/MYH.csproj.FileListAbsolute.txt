@@ -1,0 +1,11 @@
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\bin\Debug\MYH.exe.config
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\bin\Debug\MYH.exe
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\bin\Debug\MYH.pdb
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\obj\Debug\MYH.csproj.AssemblyReference.cache
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\obj\Debug\MYH.csproj.SuggestedBindingRedirects.cache
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\obj\Debug\MYH.FrmMain.resources
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\obj\Debug\MYH.Properties.Resources.resources
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\obj\Debug\MYH.csproj.GenerateResource.cache
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\obj\Debug\MYH.csproj.CoreCompileInputs.cache
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\obj\Debug\MYH.exe
+C:\Users\deveb\Source\Repos\elecbug\MYH\MYH\obj\Debug\MYH.pdb

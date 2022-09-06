@@ -1,0 +1,114 @@
+﻿ReTry:
+            for (int h = y; h >= 0; h--)
+            {
+                for (int w = x + 1; w < size_x; w++)
+                {
+                    if (field[w, h] == POSSIBLE_EMPTY)
+                    {
+                        if ((w > 0 && field[w - 1, h] == CHANGE_EMPTY)
+                         || (h > 0 && field[w, h - 1] == CHANGE_EMPTY)
+                         || (w < size_x - 1 && field[w + 1, h] == CHANGE_EMPTY)
+                         || (h < size_y - 1 && field[w, h + 1] == CHANGE_EMPTY))
+                        {
+                            field[w, h] = CHANGE_EMPTY;
+                        }
+                    }
+                }
+            }
+            for (int w = x; w >= 0; w--)
+            {
+                for (int h = y - 1; h >= 0; h--)
+                {
+                    if (field[w, h] == POSSIBLE_EMPTY)
+                    {
+                        if ((w > 0 && field[w - 1, h] == CHANGE_EMPTY)
+                         || (h > 0 && field[w, h - 1] == CHANGE_EMPTY)
+                         || (w < size_x - 1 && field[w + 1, h] == CHANGE_EMPTY)
+                         || (h < size_y - 1 && field[w, h + 1] == CHANGE_EMPTY))
+                        {
+                            field[w, h] = CHANGE_EMPTY;
+                        }
+                    }
+                }
+            }
+            for (int h = y; h < size_y; h++)
+            {
+                for (int w = x - 1; w >= 0; w--)
+                {
+                    if (field[w, h] == POSSIBLE_EMPTY)
+                    {
+                        if ((w > 0 && field[w - 1, h] == CHANGE_EMPTY)
+                         || (h > 0 && field[w, h - 1] == CHANGE_EMPTY)
+                         || (w < size_x - 1 && field[w + 1, h] == CHANGE_EMPTY)
+                         || (h < size_y - 1 && field[w, h + 1] == CHANGE_EMPTY))
+                        {
+                            field[w, h] = CHANGE_EMPTY;
+                        }
+                    }
+                }
+            }
+            for (int w = x; w < size_x; w++)
+            {
+                for (int h = y + 1; h < size_y; h++)
+                {
+                    if (field[w, h] == POSSIBLE_EMPTY)
+                    {
+                        if ((w > 0 && field[w - 1, h] == CHANGE_EMPTY)
+                         || (h > 0 && field[w, h - 1] == CHANGE_EMPTY)
+                         || (w < size_x - 1 && field[w + 1, h] == CHANGE_EMPTY)
+                         || (h < size_y - 1 && field[w, h + 1] == CHANGE_EMPTY))
+                        {
+                            field[w, h] = CHANGE_EMPTY;
+                        }
+                    }
+                }
+            }
+
+            for (int w = 0; w < size_x; w++)
+            {
+                for (int h = 0; h < size_y; h++)
+                {
+                    if (field[w, h] == POSSIBLE_EMPTY)
+                    {
+                        if ((w > 0 && field[w - 1, h] == CHANGE_EMPTY)
+                         || (h > 0 && field[w, h - 1] == CHANGE_EMPTY)
+                         || (w < size_x - 1 && field[w + 1, h] == CHANGE_EMPTY)
+                         || (h < size_y - 1 && field[w, h + 1] == CHANGE_EMPTY))
+                        {
+                            x = w;
+                            y = h;
+                            Debug.WriteLine("Loof (" + x + ", " + y + ")");
+                            goto ReTry;
+                        }
+                    }
+                }
+            }
+
+            ReTry:
+            for (int w = 0; w < size_x; w++)
+            {
+                for (int h = 0; h < size_y; h++)
+                {
+                    if ((w + 1 < size_x && field[w + 1, h] == CHANGE_EMPTY) ||
+                       (w + 1 < size_x && h - 1 >= 0 && field[w + 1, h - 1] == CHANGE_EMPTY) ||
+                       (h - 1 >= 0 && field[w, h - 1] == CHANGE_EMPTY) ||
+                       (w - 1 >= 0 && h - 1 >= 0 && field[w - 1, h - 1] == CHANGE_EMPTY) ||
+                       (w - 1 >= 0 && field[w - 1, h] == CHANGE_EMPTY) ||
+                       (w - 1 >= 0 && h + 1 < size_y && field[w - 1, h + 1] == CHANGE_EMPTY) ||
+                       (h + 1 < size_y && field[w, h + 1] == CHANGE_EMPTY) ||
+                       (w + 1 < size_x && h + 1 < size_y && field[w + 1, h + 1] == CHANGE_EMPTY))
+                    {
+                        if (field[w, h] == POSSIBLE_EMPTY)
+                        {
+                            field[w, h] = CHANGE_EMPTY;
+                        }
+                    }
+                }
+            }
+
+            if (field != field_past)
+            {
+                field_past = (int[,])field.Clone();
+                Debug.WriteLine("Loof: " + ++loof_number);
+                goto ReTry;
+            }
