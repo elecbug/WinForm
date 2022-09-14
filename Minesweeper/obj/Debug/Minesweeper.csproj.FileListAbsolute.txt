@@ -1,0 +1,12 @@
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\bin\Debug\Minesweeper.exe.config
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\bin\Debug\Minesweeper.exe
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\bin\Debug\Minesweeper.pdb
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.csproj.AssemblyReference.cache
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.csproj.SuggestedBindingRedirects.cache
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.MainForm.resources
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.RuleForm.resources
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.exe
+C:\Users\deveb\source\repos\elecbug\CSharp\Minesweeper\obj\Debug\Minesweeper.pdb

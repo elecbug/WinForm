@@ -1,0 +1,11 @@
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\bin\Debug\ScreenShot.exe.config
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\bin\Debug\ScreenShot.exe
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\bin\Debug\ScreenShot.pdb
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\obj\Debug\ScreenShot.csproj.AssemblyReference.cache
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\obj\Debug\ScreenShot.csproj.SuggestedBindingRedirects.cache
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\obj\Debug\ScreenShot.Form1.resources
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\obj\Debug\ScreenShot.Properties.Resources.resources
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\obj\Debug\ScreenShot.csproj.GenerateResource.cache
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\obj\Debug\ScreenShot.csproj.CoreCompileInputs.cache
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\obj\Debug\ScreenShot.exe
+C:\Users\deveb\source\repos\elecbug\CSharp\ScreenShot\obj\Debug\ScreenShot.pdb
