@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7ljf9j1DXC1U059PBjRs++bwmkbPz6ocVYXJ103oM4EEIHmuemhWY7PvILmacp/Jz5ByQAg8HPh2KfWDQ9iWCA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\elecbug\\CSharp\\Galmurry\\Galmurry.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.web.webview2\\1.0.1370.28\\microsoft.web.webview2.1.0.1370.28.nupkg.sha512"
+  ],
+  "logs": []
+}
