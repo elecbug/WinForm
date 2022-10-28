@@ -19,7 +19,7 @@ namespace Galmurry
             this.Load += MainFormLoad;
 
             this.Text = "Galmurry";
-            this.Font = new Font("±¼¸²Ã¼", 11, FontStyle.Regular);
+            this.Font = new Font("Malgun Gothic", 11, FontStyle.Regular);
         }
 
         private void MainFormLoad(object? sender, EventArgs e)
@@ -140,7 +140,39 @@ namespace Galmurry
 
         private async void ReadClick(object? sender, EventArgs e)
         {
-            this.read_text.Text = await view.ExecuteScriptAsync("document.documentElement.outerHTML");
+            this.read_text.Text = HtmlConverter(await view.ExecuteScriptAsync("document.documentElement.outerHTML"));
+        }
+
+        private string HtmlConverter(string text)
+        {
+            List<char> strs = text.ToCharArray().ToList();
+
+            for (int i = 0; i < strs.Count - 6; i++)
+            {
+                if (strs[i] == '\\' && strs[i + 1] == 'u')
+                {
+                    short s = short.Parse(($"{strs[i + 2]}{strs[i + 3]}{strs[i + 4]}{strs[i + 5]}"),
+                        System.Globalization.NumberStyles.HexNumber);
+                    char c = (char)s;
+
+                    strs.Insert(i, c);
+                    for (int j = 0; j < 6; j++)
+                    {
+                        strs.RemoveAt(i + 1);
+                    }
+                }
+            }
+
+            text = new string(strs.ToArray());
+
+            text = text.Replace("\\n", "\r\n");
+            text = text.Replace("\\t", "\t");
+            text = text.Replace("\\\"", "\"");
+            text = text.Replace("\\:", ":");
+            text = text.Replace("&nbsp;", " ");
+            text = text.Replace("\\\\", "\\");
+
+            return text;
         }
 
         private void WebViewSourceChanged(object? sender, Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs e)
