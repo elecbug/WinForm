@@ -1,4 +1,4 @@
-using Microsoft.Web.WebView2.WinForms;
+﻿using Microsoft.Web.WebView2.WinForms;
 using System.Diagnostics;
 
 namespace Galmurry
@@ -17,9 +17,9 @@ namespace Galmurry
         {
             InitializeComponent();
             this.Load += MainFormLoad;
-            
+
             this.Text = "Galmurry";
-            this.Font = new Font("����ü", 11, FontStyle.Regular);
+            this.Font = new Font("±¼¸²Ã¼", 11, FontStyle.Regular);
         }
 
         private void MainFormLoad(object? sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace Galmurry
             {
                 Parent = this.splitter.Panel2,
                 Visible = true,
-                Location = new Point(5,45),
+                Location = new Point(5, 45),
                 Size = new Size(this.splitter.Panel2.Width - 10, 35),
                 LanguageOption = RichTextBoxLanguageOptions.UIFonts,
                 Multiline = false,
