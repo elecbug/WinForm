@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotpia", "MyDot\Dotpia.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenShot", "ScreenShot\ScreenShot.csproj", "{5E98C223-C9AF-4B15-9C66-BE0CB0CB41EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galmurry", "Galmurry\Galmurry.csproj", "{ADED8EBE-D843-4D18-8C2F-04B1844DFD6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galmurry", "Galmurry\Galmurry.csproj", "{ADED8EBE-D843-4D18-8C2F-04B1844DFD6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebita", "Rebita\Rebita.csproj", "{3B289C2B-A851-4980-9504-A9E6B36B8A2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{ADED8EBE-D843-4D18-8C2F-04B1844DFD6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADED8EBE-D843-4D18-8C2F-04B1844DFD6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADED8EBE-D843-4D18-8C2F-04B1844DFD6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B289C2B-A851-4980-9504-A9E6B36B8A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B289C2B-A851-4980-9504-A9E6B36B8A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B289C2B-A851-4980-9504-A9E6B36B8A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B289C2B-A851-4980-9504-A9E6B36B8A2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
