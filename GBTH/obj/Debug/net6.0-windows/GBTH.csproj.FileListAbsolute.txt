@@ -16,3 +16,7 @@ C:\Users\tkvkf\source\repos\elecbug\CSharp\GBTH\obj\Debug\net6.0-windows\GBTH.pd
 C:\Users\tkvkf\source\repos\elecbug\CSharp\GBTH\obj\Debug\net6.0-windows\GBTH.genruntimeconfig.cache
 C:\Users\tkvkf\source\repos\elecbug\CSharp\GBTH\obj\Debug\net6.0-windows\ref\GBTH.dll
 C:\Users\tkvkf\source\repos\elecbug\CSharp\GBTH\obj\Debug\net6.0-windows\GBTH.Properties.Resources.resources
+C:\Users\tkvkf\source\repos\elecbug\CSharp\GBTH\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\tkvkf\source\repos\elecbug\CSharp\GBTH\bin\Debug\net6.0-windows\EB.Excel.dll
+C:\Users\tkvkf\source\repos\elecbug\CSharp\GBTH\bin\Debug\net6.0-windows\EB.Excel.pdb
+C:\Users\tkvkf\source\repos\elecbug\CSharp\GBTH\obj\Debug\net6.0-windows\GBTH.csproj.CopyComplete

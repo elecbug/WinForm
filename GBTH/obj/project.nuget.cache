@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3VE2Gjmu2cB+5oL1yCZ73kZ8YEzy1OYfoP0zkD/FQuJXIVDk9P1XgJnYMfYBdOw1fMQ7Na8G5ACvPUT7wh53Xw==",
+  "dgSpecHash": "irPXyU2RSIR/x/eNVlewzQaqIWm6GhCR7EUS62iyswW9CqSf5QQFD7Dyr3U3kGkouJok9KjGYeh9rhDgybcBfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\tkvkf\\source\\repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\tkvkf\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
+  ],
   "logs": []
 }

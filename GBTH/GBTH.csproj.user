@@ -4,9 +4,6 @@
     <Compile Update="List\PartedIngredientList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="List\Report.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
