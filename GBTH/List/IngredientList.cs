@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -53,11 +53,11 @@ namespace GBTH.List
         public List<Row> Rows { get; private set; }
         public List<Report> Reports { get; private set; }
 
-        private DataGridView grid_view;
+        private ReportGrid grid_view;
         private string? path;
         private Report? selected_report;
 
-        public IngredientList(ref DataGridView grid_view) : base() 
+        public IngredientList(ref ReportGrid grid_view) : base() 
         {
             this.Rows = new List<Row>();
             this.Reports = new List<Report>();
@@ -104,20 +104,6 @@ namespace GBTH.List
 
             this.Sort();
         }
-
-        public void Add(Row row)
-        {
-            ListViewItem item = new ListViewItem(row.Number.ToString());
-
-            item.SubItems.Add(row.Name);
-            item.SubItems.Add(row.Standard);
-            item.SubItems.Add(row.Unit);
-            item.SubItems.Add(row.Assortment);
-
-            this.Rows.Add(row);
-            this.Items.Add(item);
-        }
-
         private void IngredientListSelectionChanged(object? sender, EventArgs e)
         {
             if (this.SelectedItems.Count > 0)
@@ -145,6 +131,23 @@ namespace GBTH.List
             }
         }
 
+        public void Add(Row row)
+        {
+            ListViewItem item = new ListViewItem(row.Number.ToString());
+
+            item.SubItems.Add(row.Name);
+            item.SubItems.Add(row.Standard);
+            item.SubItems.Add(row.Unit);
+            item.SubItems.Add(row.Assortment);
+
+            this.Rows.Add(row);
+            this.Items.Add(item);
+        }
+        public void Print()
+        {
+
+        }
+
         private void LoadData()
         {
             this.grid_view.Rows.Clear();
@@ -164,7 +167,6 @@ namespace GBTH.List
                     );
             }
         }
-
         public void SaveData()
         {
             if (this.selected_report != null)
@@ -256,12 +258,11 @@ namespace GBTH.List
             writer.Write(result);
             writer.Close();
         }
-
-        public static IngredientList Deserialize(ref DataGridView view, string path_of_folder, int year)
+        public static IngredientList Deserialize(ref ReportGrid grid_view, string path_of_folder, int year)
         {
             if (!Directory.Exists(path_of_folder + "\\" + year))
             {
-                IngredientList result = new IngredientList(ref view)
+                IngredientList result = new IngredientList(ref grid_view)
                 {
                     path = path_of_folder + "\\" + year,
                 };
@@ -278,7 +279,7 @@ namespace GBTH.List
 
             if (rows != null && reports != null)
             {
-                IngredientList result = new IngredientList(ref view)
+                IngredientList result = new IngredientList(ref grid_view)
                 {
                     Rows = rows,
                     path = path_of_folder + "\\" + year,
@@ -302,79 +303,6 @@ namespace GBTH.List
             {
                 throw new Exception("json rows data is null");
             }
-        }
-    }
-
-    public class ListViewColumnSorter : IComparer
-    {
-        private int column_to_sort;
-        private SortOrder order_of_sort;
-        private CaseInsensitiveComparer object_compare;
-        private Type type;
-
-        public int SortColumn
-        {
-            set
-            {
-                this.column_to_sort = value;
-            }
-            get
-            {
-                return column_to_sort;
-            }
-        }
-        public SortOrder Order
-        {
-            set
-            {
-                this.order_of_sort = value;
-            }
-            get
-            {
-                return order_of_sort;
-            }
-        }
-
-        public ListViewColumnSorter()
-        {
-            this.column_to_sort = 0;
-            this.order_of_sort = SortOrder.None;
-            this.object_compare = new CaseInsensitiveComparer();
-            this.type = typeof(string);
-        }
-
-        public int Compare(object? x, object? y)
-        {
-            int result;
-
-            if (this.type == typeof(int))
-            {
-                result = this.object_compare.Compare(int.Parse((x as ListViewItem)!.SubItems[column_to_sort].Text),
-                    int.Parse((y as ListViewItem)!.SubItems[column_to_sort].Text));
-            }
-            else
-            {
-                result = this.object_compare.Compare((x as ListViewItem)!.SubItems[column_to_sort].Text,
-                    (y as ListViewItem)!.SubItems[column_to_sort].Text);
-            }
-
-            if (this.order_of_sort == SortOrder.Ascending)
-            {
-                return result;
-            }
-            else if (this.order_of_sort == SortOrder.Descending)
-            {
-                return (-result);
-            }
-            else
-            {
-                return 0;
-            }
-        }
-
-        public void SetType(Type type)
-        {
-            this.type = type;
         }
     }
 }
