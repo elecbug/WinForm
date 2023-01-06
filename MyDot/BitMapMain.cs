@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Dotpia
@@ -145,7 +139,7 @@ namespace Dotpia
                         nowMouse.Y = (int)(nowMouse.Y * dcmHeight);
                         Pnl.Location = new Point(pntMouseWithForm.X - nowMouse.X, pntMouseWithForm.Y - nowMouse.Y);
                         pntMouseWithPnl = new Point(pntMouseWithPnl.X * 2, pntMouseWithPnl.Y * 2);
-                        if(bolDragOn)
+                        if (bolDragOn)
                         {
                             pntDrag[0].X = (int)(pntDrag[0].X * dcmWidth);
                             pntDrag[0].Y = (int)(pntDrag[0].Y * dcmHeight);
@@ -216,7 +210,7 @@ namespace Dotpia
             DataSaver.intSize = Math.Min(Pnl.Width / grpBitMap.GetLength(0), Pnl.Height / grpBitMap.GetLength(1));
             if (DataSaver.intSize < 1)
             {
-                DataSaver.intSize = 1; 
+                DataSaver.intSize = 1;
             }
             Pnl.Width = DataSaver.intSize * DataSaver.intWidth;
             Pnl.Height = DataSaver.intSize * DataSaver.intHeight;
@@ -859,13 +853,13 @@ namespace Dotpia
             int maxX = Math.Max((int)(pntDrag[0].X / DataSaver.intSize), (int)(pntDrag[1].X / DataSaver.intSize)) + 1;
             int maxY = Math.Max((int)(pntDrag[0].Y / DataSaver.intSize), (int)(pntDrag[1].Y / DataSaver.intSize)) + 1;
             if (DataSaver.bolCut
-            && (pntMouseWithPnl.X < minX * DataSaver.intSize || pntMouseWithPnl.Y < minY * DataSaver.intSize 
-             || pntMouseWithPnl.X > maxX * DataSaver.intSize || pntMouseWithPnl.Y > maxY * DataSaver.intSize)) 
+            && (pntMouseWithPnl.X < minX * DataSaver.intSize || pntMouseWithPnl.Y < minY * DataSaver.intSize
+             || pntMouseWithPnl.X > maxX * DataSaver.intSize || pntMouseWithPnl.Y > maxY * DataSaver.intSize))
             {
                 pntDrag[0] = new Point(pntMouseWithPnl.X, pntMouseWithPnl.Y);
                 bolDragOn = false;
             }
-            else if(DataSaver.bolCut)
+            else if (DataSaver.bolCut)
             {
                 pntNewLocation[0] = new Point(pntMouseWithPnl.X, pntMouseWithPnl.Y);
             }
@@ -976,7 +970,7 @@ namespace Dotpia
                             }
                         }
                     }
-                }           
+                }
                 bolDragOn = false;
                 ReDrawing();
                 pntDrag = new Point[2];

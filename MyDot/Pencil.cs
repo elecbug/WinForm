@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Dotpia
@@ -183,7 +177,7 @@ namespace Dotpia
                             RGBA nowRGBA = new RGBA(bitmapRGBA[x, y, 0]);
                             for (int r = 1; r < DataSaver.HIGH_RAYER; r++)
                             {
-                                nowRGBA = new RGBA(Combine(new RGBA(nowRGBA), new RGBA(bitmapRGBA[x, y, r ])));
+                                nowRGBA = new RGBA(Combine(new RGBA(nowRGBA), new RGBA(bitmapRGBA[x, y, r])));
                             }
                             //nowRGBA.A *= 2;
                             //if (nowRGBA.A > 255)

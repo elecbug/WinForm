@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Dotpia
+﻿namespace Dotpia
 {
     public class FalseArea
     {
@@ -68,7 +62,7 @@ namespace Dotpia
         {
             FalseArea[] returner = new FalseArea[a.Length + 1];
 
-            for(int i=0;i<a.Length;i++)
+            for (int i = 0; i < a.Length; i++)
             {
                 returner[i] = a[i];
             }

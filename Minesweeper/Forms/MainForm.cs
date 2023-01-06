@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Minesweeper
@@ -83,8 +78,8 @@ namespace Minesweeper
             label_ranks.Text = $"Rank: ({size_x}, {size_y}) {hide_num} bombs\r\n";
             for (int i = 0; i < Math.Min(20, ranks.Count); i++)
             {
-                label_ranks.Text += $"{i+1,2}: {To_String(ranks[i].Sec)} on {ranks[i].Day}\r\n";
-            } 
+                label_ranks.Text += $"{i + 1,2}: {To_String(ranks[i].Sec)} on {ranks[i].Day}\r\n";
+            }
         }
 
         private void Click_menu_log_playtime(object sender, EventArgs e)
@@ -193,7 +188,7 @@ namespace Minesweeper
             else
             {
                 return 0;
-            } 
+            }
         }
 
         private int Get_NearHide(int x, int y)

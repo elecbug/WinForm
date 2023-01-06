@@ -1,13 +1,10 @@
 ﻿using Discord;
-using Discord.Rest;
 using Discord.WebSocket;
-using Excel = Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Rebita.Classes.Discord
 {
@@ -116,6 +113,6 @@ namespace Rebita.Classes.Discord
                 {
                     this.data_log.Text += text + "\r\n";
                 });
-        } 
+        }
     }
 }

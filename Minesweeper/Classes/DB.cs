@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Minesweeper
 {
@@ -40,7 +37,7 @@ namespace Minesweeper
             };
 
             File.WriteAllLines(path, defalut);
-            
+
         }
 
         public void WriteLine(bool win_game, bool lose_game, int now_sec = 0)
@@ -183,7 +180,7 @@ namespace Minesweeper
                             file_data[first + i + 5]
                         }));
                     }
-                    
+
                     return ranks;
                 }
                 else
@@ -235,7 +232,7 @@ namespace Minesweeper
         {
             string result = "";
 
-            foreach(char c in s)
+            foreach (char c in s)
             {
                 result += Encryption(c);
             }

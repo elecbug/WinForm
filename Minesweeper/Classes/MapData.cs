@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Minesweeper
+﻿namespace Minesweeper
 {
     internal class MapData
     {
         private int data;
 
-        public MapData() 
+        public MapData()
         {
             data = 0;
         }

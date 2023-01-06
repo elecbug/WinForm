@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Dotpia
@@ -60,7 +54,7 @@ namespace Dotpia
             {
                 if (!bolUDClick)
                 {
-                    DataSaver.intLayerTP[int.Parse($"{ ((RichTextBox)sender).Name[3]}")] = int.Parse(((RichTextBox)sender).Text);
+                    DataSaver.intLayerTP[int.Parse($"{((RichTextBox)sender).Name[3]}")] = int.Parse(((RichTextBox)sender).Text);
                     DataSaver.bmmNow.ReDrawing();
                 }
             }

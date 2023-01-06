@@ -119,12 +119,15 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BaseExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\base.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\resources\base.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DefaultPath" xml:space="preserve">
+    <value>default.xlsx</value>
   </data>
   <data name="IngredientPath" xml:space="preserve">
-    <value>ingredient.json</value>
-  </data>
-  <data name="PartedIngredientPath" xml:space="preserve">
     <value>part.json</value>
+  </data>
+  <data name="ReportPath" xml:space="preserve">
+    <value>report.xlsx</value>
   </data>
 </root>

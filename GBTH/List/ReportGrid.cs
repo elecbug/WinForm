@@ -1,10 +1,8 @@
-﻿using System.Windows.Forms;
-
-namespace GBTH.List
+﻿namespace GBTH.List
 {
     public class ReportGrid : DataGridView
     {
-        public ReportGrid() : base() 
+        public ReportGrid() : base()
         {
             this.Columns.Add("Number", "번호"); //0
             this.Columns.Add("Date", "날짜");

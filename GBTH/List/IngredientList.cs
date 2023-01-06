@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
 namespace GBTH.List
 {
@@ -48,6 +42,25 @@ namespace GBTH.List
                 this.Manager = manager;
                 this.Other = other;
             }
+
+            public string?[,] ToArray()
+            {
+                return new string?[1, 10]
+                {
+                    {
+                        this.Number.ToString(),
+                        this.Date,
+                        this.Descryption,
+                        null,
+                        null,
+                        this.Insert.ToString(),
+                        this.Use.ToString(),
+                        this.Storege.ToString(),
+                        this.Manager,
+                        this.Other,
+                    },
+                };
+            }
         }
 
         public List<Row> Rows { get; private set; }
@@ -57,7 +70,7 @@ namespace GBTH.List
         private string? path;
         private Report? selected_report;
 
-        public IngredientList(ref ReportGrid grid_view) : base() 
+        public IngredientList(ref ReportGrid grid_view) : base()
         {
             this.Rows = new List<Row>();
             this.Reports = new List<Report>();
@@ -120,8 +133,8 @@ namespace GBTH.List
                     this.selected_report = new Report()
                     {
                         Number = int.Parse(this.SelectedItems[0].Text),
-                        Name = this.SelectedItems[0].SubItems[0].Text,
-                        Standard = this.SelectedItems[0].SubItems[1].Text,
+                        Name = this.SelectedItems[0].SubItems[1].Text,
+                        Standard = this.SelectedItems[0].SubItems[2].Text,
                     };
 
                     this.Reports.Add(this.selected_report);
@@ -143,9 +156,64 @@ namespace GBTH.List
             this.Rows.Add(row);
             this.Items.Add(item);
         }
-        public void Print()
+        public void Print(Label label)
         {
+            SaveData();
 
+            StreamWriter writer = new StreamWriter(this.path! + "\\" + Properties.Resources.ReportPath);
+            BufferedStream buffer = new BufferedStream(writer.BaseStream);
+            buffer.Write(Properties.Resources.BaseExcel);
+            buffer.Close();
+
+            EB.Excel.Stream stream = new EB.Excel.Stream(this.path! + "\\" + Properties.Resources.ReportPath);
+
+            Microsoft.Office.Interop.Excel.Worksheet[] unique_sheet =
+            {
+                (stream.Sheets[1] as Microsoft.Office.Interop.Excel.Worksheet)!, // first
+                (stream.Sheets[2] as Microsoft.Office.Interop.Excel.Worksheet)!, // middle
+                (stream.Sheets[3] as Microsoft.Office.Interop.Excel.Worksheet)!, // end point
+            };
+
+            int page = 3;
+
+            for (int i = 0; i < this.Reports.Count; i++)
+            {
+                label.Text = "" + (i / ((decimal)this.Reports.Count) * 100).ToString("0.00") + "%...";
+
+                int pages = ((this.Reports[i].Rows.Count - 21) / 29)
+                    + ((this.Reports[i].Rows.Count - 21) % 29 > 0 ? 1 : 0) + 1;
+                if (pages % 2 != 0) pages++;
+                if (pages < 2) pages = 2;
+
+                unique_sheet[0].Copy(unique_sheet[2]);
+                for (int p = 0; p < pages - 1; p++)
+                {
+                    unique_sheet[1].Copy(unique_sheet[2]);
+                }
+
+                int r = 0;
+
+                stream.SelectionSheetNumber = page++;
+                stream.Write("B7", new string[,] { { this.Reports[i].Name! } });
+                stream.Write("E7", new string[,] { { this.Reports[i].Standard! } });
+
+                for (int n = 10; n <= 30 && r < this.Reports[i].Rows.Count; n++)
+                {
+                    stream.Write("A" + n, this.Reports[i].Rows[r++].ToArray());
+                }
+                for (int p = 0; p < pages - 1; p++)
+                {
+                    stream.SelectionSheetNumber = page++;
+
+                    for (int n = 2; n <= 30 && r < this.Reports[i].Rows.Count; n++)
+                    {
+                        stream.Write("A" + n, this.Reports[i].Rows[r++].ToArray());
+                    }
+                }
+            }
+            label.Text = "100%!";
+
+            stream.Close();
         }
 
         private void LoadData()
@@ -177,7 +245,7 @@ namespace GBTH.List
                 {
                     this.selected_report!.Rows.Add(new ReportRow
                         (
-                            int.Parse((this.grid_view.Rows[i].Cells[0].EditedFormattedValue as string == "" ? "0" 
+                            int.Parse((this.grid_view.Rows[i].Cells[0].EditedFormattedValue as string == "" ? "0"
                                 : this.grid_view.Rows[i].Cells[0].EditedFormattedValue as string)!),
                             this.grid_view.Rows[i].Cells[1].EditedFormattedValue as string,
                             this.grid_view.Rows[i].Cells[2].EditedFormattedValue as string,
@@ -188,7 +256,7 @@ namespace GBTH.List
                             int.Parse((this.grid_view.Rows[i].Cells[5].EditedFormattedValue as string == "" ? "0"
                                 : this.grid_view.Rows[i].Cells[5].EditedFormattedValue as string)!),
                             this.grid_view.Rows[i].Cells[6].EditedFormattedValue as string,
-                            this.grid_view.Rows[i].Cells[1].EditedFormattedValue as string
+                            this.grid_view.Rows[i].Cells[7].EditedFormattedValue as string
                         ));
                 }
 
@@ -199,7 +267,7 @@ namespace GBTH.List
         public void Serialize()
         {
             string result = JsonSerializer.Serialize(this.Rows) + "\r" + JsonSerializer.Serialize(this.Reports);
-            
+
             if (this.path != null)
             {
                 if (!Directory.Exists(this.path))
@@ -212,7 +280,7 @@ namespace GBTH.List
                 throw new Exception("This instance isn't have path");
             }
 
-            StreamWriter writer = new StreamWriter(this.path + "\\" + Properties.Resources.PartedIngredientPath);
+            StreamWriter writer = new StreamWriter(this.path + "\\" + Properties.Resources.IngredientPath);
             writer.Write(result);
             writer.Close();
         }
@@ -225,15 +293,17 @@ namespace GBTH.List
                 Directory.CreateDirectory(path_of_folder + "\\" + year);
             }
 
-            StreamWriter writer = new StreamWriter(path_of_folder + "\\" + year + "\\" + Properties.Resources.PartedIngredientPath);
+            StreamWriter writer = new StreamWriter(path_of_folder + "\\" + year + "\\" + Properties.Resources.IngredientPath);
             writer.Write(result);
             writer.Close();
         }
 
         public void PartedDeserialize()
         {
-            EB.Excel.Stream stream = new EB.Excel.Stream(Environment.CurrentDirectory + "\\default.xlsx");
+            EB.Excel.Stream stream = new EB.Excel.Stream(Environment.CurrentDirectory
+                + "\\" + Properties.Resources.DefaultPath);
             string[,] cells = stream.Read(stream.UsedRange);
+            stream.Close();
 
             for (int r = 0; r < cells.GetLength(0); r++)
             {
@@ -254,7 +324,7 @@ namespace GBTH.List
                 Directory.CreateDirectory(this.path!);
             }
 
-            StreamWriter writer = new StreamWriter(this.path + "\\" + Properties.Resources.PartedIngredientPath);
+            StreamWriter writer = new StreamWriter(this.path + "\\" + Properties.Resources.IngredientPath);
             writer.Write(result);
             writer.Close();
         }
@@ -268,7 +338,7 @@ namespace GBTH.List
                 };
                 result.PartedDeserialize();
             }
-            StreamReader reader = new StreamReader(path_of_folder + "\\" + year + "\\" + Properties.Resources.PartedIngredientPath);
+            StreamReader reader = new StreamReader(path_of_folder + "\\" + year + "\\" + Properties.Resources.IngredientPath);
             string json = reader.ReadToEnd();
             string row_json = json.Split('\r')[0];
             string report_json = json.Split('\r')[1];

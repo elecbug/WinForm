@@ -10,6 +10,7 @@ namespace GBTH
         private ReportGrid grid_view;
         private NumericUpDown numeric;
         private Button print;
+        private Label label;
 
         public MainForm()
         {
@@ -70,6 +71,15 @@ namespace GBTH
             };
             this.print.Click += PrintClick;
 
+            this.label = new Label()
+            {
+                Location = new Point(this.numeric.Width * 2 + 15, 5),
+                Parent = this.tool_container.Panel1,
+                Size = this.numeric.Size,
+                Visible = true,
+                Text = "",
+            };
+
             this.list_view = IngredientList.Deserialize(ref this.grid_view, Environment.CurrentDirectory, (int)this.numeric.Value);
             this.list_view.Parent = this.container.Panel1;
             this.list_view.Visible = true;
@@ -105,7 +115,8 @@ namespace GBTH
         }
         private void PrintClick(object? sender, EventArgs e)
         {
-            this.list_view.Print();
+            this.Invoke((MethodInvoker)delegate
+               { this.list_view.Print(this.label); });
         }
 
         private void PropertiesSave()

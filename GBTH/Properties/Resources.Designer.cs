@@ -71,7 +71,16 @@ namespace GBTH.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ingredient.json.
+        ///   Looks up a localized string similar to default.xlsx.
+        /// </summary>
+        public static string DefaultPath {
+            get {
+                return ResourceManager.GetString("DefaultPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to part.json.
         /// </summary>
         public static string IngredientPath {
             get {
@@ -80,11 +89,11 @@ namespace GBTH.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to part.json.
+        ///   Looks up a localized string similar to report.xlsx.
         /// </summary>
-        public static string PartedIngredientPath {
+        public static string ReportPath {
             get {
-                return ResourceManager.GetString("PartedIngredientPath", resourceCulture);
+                return ResourceManager.GetString("ReportPath", resourceCulture);
             }
         }
     }

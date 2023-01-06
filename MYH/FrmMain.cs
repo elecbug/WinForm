@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MYH
@@ -93,7 +86,7 @@ namespace MYH
                 if (btn1.Name == $"button{i}")
                 {
                     return (Button)this.Controls.Find($"button{i - 5}", true)[0];
-                } 
+                }
             }
             return new Button();
         }
@@ -200,8 +193,8 @@ namespace MYH
                         {
                             ButtonClicker(j, (Button)this.Controls.Find($"button{j}", true)[0]);
                         }
-                        catch 
-                        { 
+                        catch
+                        {
                             goto Re;
                         }
                     }
@@ -241,7 +234,7 @@ namespace MYH
                 }
             }
         }
-        
+
         private void IndexCleaner()
         {
             for (int i = 1; i <= 25; i++)
@@ -270,7 +263,7 @@ namespace MYH
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ButtonClicker(4, button4); 
+            ButtonClicker(4, button4);
             intClick++;
         }
 
@@ -419,7 +412,7 @@ namespace MYH
                 bolIndex = true;
                 IndexMaker();
             }
-            else if(bolIndex)
+            else if (bolIndex)
             {
                 bolIndex = false;
                 IndexCleaner();
