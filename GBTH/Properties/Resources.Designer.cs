@@ -61,6 +61,16 @@ namespace GBTH.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] BaseExcel {
+            get {
+                object obj = ResourceManager.GetObject("BaseExcel", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ingredient.json.
         /// </summary>
         public static string IngredientPath {
