@@ -6,16 +6,21 @@ namespace GBTH
     {
         private SplitContainer tool_container;
         private SplitContainer container;
-        private PartedIngredientList list_view;
+        private IngredientList list_view;
         private DataGridView grid_view;
         private NumericUpDown numeric;
 
         public MainForm()
         {
-            this.WindowState = FormWindowState.Maximized;
+
+            this.Load += MainFormLoad;
             this.FormClosed += MainFormFormClosed;
 
             InitializeComponent();
+
+            this.Text = "GBTH";
+            this.WindowState = FormWindowState.Maximized;
+            this.Font = new Font("±¼¸²Ã¼", 13, FontStyle.Regular);
 
             this.tool_container = new SplitContainer()
             {
@@ -28,7 +33,7 @@ namespace GBTH
 
             this.container = new SplitContainer()
             {
-                Parent = this.tool_container.Panel1,
+                Parent = this.tool_container.Panel2,
                 Visible = true,
                 Size = this.tool_container.Panel1.ClientSize,
                 Dock = DockStyle.Fill,
@@ -76,7 +81,7 @@ namespace GBTH
 
             this.numeric = new NumericUpDown()
             {
-                Parent = this.tool_container.Panel2,
+                Parent = this.tool_container.Panel1,
                 Visible = true,
                 Minimum = 2000,
                 Maximum = 3000,
@@ -104,28 +109,79 @@ namespace GBTH
                 //this.list_view.Serialize(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), 2020);
             }
 
-            this.list_view = PartedIngredientList.Deserialize(ref this.grid_view, Environment.CurrentDirectory, (int)this.numeric.Value);
+            this.list_view = IngredientList.Deserialize(ref this.grid_view, Environment.CurrentDirectory, (int)this.numeric.Value);
             this.list_view.Parent = this.container.Panel1;
             this.list_view.Visible = true;
             this.list_view.Size = this.container.Panel1.ClientSize;
             this.list_view.Dock = DockStyle.Fill;
         }
 
+        private void MainFormLoad(object? sender, EventArgs e)
+        {
+            PropertiesLoad();
+        }
+
         private void NumericValueChanged(object? sender, EventArgs e)
         {
+            PropertiesSave();
+
             this.list_view.Visible = false;
             this.list_view.Dispose();
 
-            this.list_view = PartedIngredientList.Deserialize(ref this.grid_view, Environment.CurrentDirectory, (int)this.numeric.Value);
+            this.list_view = IngredientList.Deserialize(ref this.grid_view, Environment.CurrentDirectory, (int)this.numeric.Value);
             this.list_view.Parent = this.container.Panel1;
             this.list_view.Visible = true;
             this.list_view.Size = this.container.Panel1.ClientSize;
             this.list_view.Dock = DockStyle.Fill;
+
+            PropertiesLoad();
         }
 
         private void MainFormFormClosed(object? sender, FormClosedEventArgs e)
         {
             this.list_view.SaveData();
+
+            PropertiesSave();
+        }
+
+        private void PropertiesSave()
+        {
+            Properties.Settings.Default.AllSettings
+                = this.tool_container.SplitterDistance + "\\"
+                + this.container.SplitterDistance + "\\";
+
+            for (int c = 0; c < this.list_view.Columns.Count; c++)
+            {
+                Properties.Settings.Default.AllSettings
+                    += this.list_view.Columns[c].Width + "\\";
+            }
+            for (int c = 0; c < this.grid_view.Columns.Count; c++)
+            {
+                Properties.Settings.Default.AllSettings
+                    += this.grid_view.Columns[c].Width + "\\";
+            }
+
+            Properties.Settings.Default.Save();
+        }
+        private void PropertiesLoad()
+        {
+            if (Properties.Settings.Default.AllSettings != "")
+            {
+                int i = 0;
+                string[] splits = Properties.Settings.Default.AllSettings.Split('\\');
+
+                this.tool_container.SplitterDistance = int.Parse(splits[i++]);
+                this.container.SplitterDistance = int.Parse(splits[i++]);
+
+                for (int c = 0; c < this.list_view.Columns.Count; c++)
+                {
+                    this.list_view.Columns[c].Width = int.Parse(splits[i++]);
+                }
+                for (int c = 0; c < this.grid_view.Columns.Count; c++)
+                {
+                    this.grid_view.Columns[c].Width = int.Parse(splits[i++]);
+                }
+            }
         }
     }
 }
