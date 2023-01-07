@@ -19,7 +19,8 @@
             this.Columns[5].ValueType = typeof(int);
             this.Columns[5].ReadOnly = true;
 
-            this.Click += ReportGridClick;
+            this.Click += ReportDataSetting;
+            this.CellValueChanged += ReportDataSetting;
 
             foreach (DataGridViewColumn column in this.Columns)
             {
@@ -27,7 +28,7 @@
             }
         }
 
-        private void ReportGridClick(object? sender, EventArgs e)
+        private void ReportDataSetting(object? sender, EventArgs e)
         {
             this.Rows[0].Cells[5].Value
                     = int.Parse((this.Rows[0].Cells[3].EditedFormattedValue as string == "" ? "0"
