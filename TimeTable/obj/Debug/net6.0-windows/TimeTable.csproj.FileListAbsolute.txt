@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\bin\Debug\net6.0-windows\TimeTable.exe
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\bin\Debug\net6.0-windows\TimeTable.deps.json
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\bin\Debug\net6.0-windows\TimeTable.runtimeconfig.json
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\bin\Debug\net6.0-windows\TimeTable.dll
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\bin\Debug\net6.0-windows\TimeTable.pdb
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.MainForm.resources
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.csproj.GenerateResource.cache
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.AssemblyInfo.cs
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.dll
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\refint\TimeTable.dll
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.pdb
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\TimeTable.genruntimeconfig.cache
+C:\Users\user\source\repos\elecbug\CSharp\TimeTable\obj\Debug\net6.0-windows\ref\TimeTable.dll
