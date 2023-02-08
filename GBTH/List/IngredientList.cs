@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Diagnostics;
+using System.Text.Json;
 
 namespace GBTH.List
 {
@@ -201,6 +202,9 @@ namespace GBTH.List
                 {
                     stream.Write("A" + n, this.Reports[i].Rows[r++].ToArray());
                 }
+
+                stream.Write("A32", new string[,] { { $"{this.Reports[i].Number} _ 1" } });
+
                 for (int p = 0; p < pages - 1; p++)
                 {
                     stream.SelectionSheetNumber = page++;
@@ -209,6 +213,8 @@ namespace GBTH.List
                     {
                         stream.Write("A" + n, this.Reports[i].Rows[r++].ToArray());
                     }
+
+                    stream.Write("A32", new string[,] { { $"{this.Reports[i].Number} _ {p + 2}" } });
                 }
             }
             label.Text = "100%!";

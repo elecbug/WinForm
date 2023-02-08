@@ -44,3 +44,5 @@ C:\Users\user\source\repos\elecbug\CSharp\GBTH\obj\Debug\net6.0-windows\GBTH.gen
 C:\Users\user\source\repos\elecbug\CSharp\GBTH\obj\Debug\net6.0-windows\ref\GBTH.dll
 C:\Users\user\source\repos\elecbug\CSharp\GBTH\bin\Debug\net6.0-windows\GBTH.dll.config
 C:\Users\user\source\repos\elecbug\CSharp\GBTH\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Word.dll
+C:\Users\tkvkf\Source\Repos\elecbug\CSharp\GBTH\bin\Debug\net6.0-windows\GBTH.dll.config
+C:\Users\tkvkf\Source\Repos\elecbug\CSharp\GBTH\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Word.dll

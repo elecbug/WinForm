@@ -21,10 +21,19 @@
 
             this.Click += ReportDataSetting;
             this.CellValueChanged += ReportDataSetting;
+            this.RowsAdded += ReportGridRowsAdded;
 
             foreach (DataGridViewColumn column in this.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
+        private void ReportGridRowsAdded(object? sender, DataGridViewRowsAddedEventArgs e)
+        {
+            for (int r = 0; r < this.RowCount - 1; r++)
+            {
+                this.Rows[r].Cells[0].Value = r + 1;
             }
         }
 
@@ -43,6 +52,7 @@
                         : this.Rows[r - 1].Cells[4].EditedFormattedValue as string)!)
                     + int.Parse((this.Rows[r].Cells[3].EditedFormattedValue as string == "" ? "0"
                         : this.Rows[r].Cells[3].EditedFormattedValue as string)!);
+
             }
         }
     }
