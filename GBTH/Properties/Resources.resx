@@ -127,6 +127,9 @@
   <data name="IngredientPath" xml:space="preserve">
     <value>part.json</value>
   </data>
+  <data name="Katty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\katty.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ReportPath" xml:space="preserve">
     <value>report.xlsx</value>
   </data>

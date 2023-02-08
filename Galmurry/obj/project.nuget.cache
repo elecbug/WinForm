@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oO4nwc7kPoGIXTduuMCxXB7zH6xGobBgQmcURdeit/fu9t3F/B+pOMRO68E7DnMiQA094hOpwnFcrtONTTxYaw==",
+  "dgSpecHash": "OM8qSYRKHbyRYje9oQWsRWZQOBs9etA8+KKbXuRfhMERsz9rDP73wl1L7ijiwsWXREowKiNL8nwFFc3wklQ74Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tkvkf\\Source\\Repos\\elecbug\\CSharp\\Galmurry\\Galmurry.csproj",
+  "projectFilePath": "C:\\Users\\tkvkf\\source\\repos\\elecbug\\CSharp\\Galmurry\\Galmurry.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tkvkf\\.nuget\\packages\\microsoft.web.webview2\\1.0.1370.28\\microsoft.web.webview2.1.0.1370.28.nupkg.sha512"
   ],

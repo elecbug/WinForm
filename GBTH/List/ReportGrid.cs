@@ -22,6 +22,7 @@
             this.Click += ReportDataSetting;
             this.CellValueChanged += ReportDataSetting;
             this.RowsAdded += ReportGridRowsAdded;
+            this.MultiSelect = false;
 
             foreach (DataGridViewColumn column in this.Columns)
             {

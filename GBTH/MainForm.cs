@@ -1,4 +1,5 @@
 using GBTH.List;
+using GBTH.Properties;
 
 namespace GBTH
 {
@@ -23,6 +24,7 @@ namespace GBTH
             this.Text = "GBTH";
             this.WindowState = FormWindowState.Maximized;
             this.Font = new Font("±¼¸²Ã¼", 13, FontStyle.Regular);
+            this.Icon = Resources.Katty;
 
             this.tool_container = new SplitContainer()
             {
@@ -67,7 +69,7 @@ namespace GBTH
                 Parent = this.tool_container.Panel1,
                 Size = this.numeric.Size,
                 Visible = true,
-                Text = "ÀÎ¼â",
+                Text = "¿¢¼¿ ÆÄÀÏ »ý¼º",
             };
             this.print.Click += PrintClick;
 

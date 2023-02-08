@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tkvkf\\Source\\Repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj": {}
+    "C:\\Users\\tkvkf\\source\\repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tkvkf\\Source\\Repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj": {
+    "C:\\Users\\tkvkf\\source\\repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tkvkf\\Source\\Repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
+        "projectUniqueName": "C:\\Users\\tkvkf\\source\\repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
         "projectName": "GBTH",
-        "projectPath": "C:\\Users\\tkvkf\\Source\\Repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
+        "projectPath": "C:\\Users\\tkvkf\\source\\repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
         "packagesPath": "C:\\Users\\tkvkf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tkvkf\\Source\\Repos\\elecbug\\CSharp\\GBTH\\obj\\",
+        "outputPath": "C:\\Users\\tkvkf\\source\\repos\\elecbug\\CSharp\\GBTH\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
