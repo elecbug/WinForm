@@ -49,8 +49,8 @@
                 this.Rows[r].Cells[5].Value
                     = int.Parse((this.Rows[r - 1].Cells[5].EditedFormattedValue as string == "" ? "0"
                         : this.Rows[r - 1].Cells[5].EditedFormattedValue as string)!)
-                    - int.Parse((this.Rows[r - 1].Cells[4].EditedFormattedValue as string == "" ? "0"
-                        : this.Rows[r - 1].Cells[4].EditedFormattedValue as string)!)
+                    - int.Parse((this.Rows[r].Cells[4].EditedFormattedValue as string == "" ? "0"
+                        : this.Rows[r].Cells[4].EditedFormattedValue as string)!)
                     + int.Parse((this.Rows[r].Cells[3].EditedFormattedValue as string == "" ? "0"
                         : this.Rows[r].Cells[3].EditedFormattedValue as string)!);
 
