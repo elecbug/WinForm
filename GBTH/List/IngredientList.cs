@@ -196,7 +196,7 @@ namespace GBTH.List
 
                 stream.SelectionSheetNumber = page++;
                 stream.Write("B7", new string[,] { { this.Reports[i].Name! } });
-                stream.Write("E7", new string[,] { { this.Reports[i].Standard! } });
+                stream.Write("H7", new string[,] { { this.Reports[i].Standard! } });
 
                 for (int n = 10; n <= 30 && r < this.Reports[i].Rows.Count; n++)
                 {
@@ -334,9 +334,9 @@ namespace GBTH.List
             writer.Write(result);
             writer.Close();
         }
-        public static IngredientList Deserialize(ref ReportGrid grid_view, string path_of_folder, int year)
+        public static IngredientList Deserialize(ref ReportGrid grid_view, string path_of_folder, int year, bool create_mode = false)
         {
-            if (!Directory.Exists(path_of_folder + "\\" + year))
+            if (!Directory.Exists(path_of_folder + "\\" + year) || create_mode)
             {
                 IngredientList result = new IngredientList(ref grid_view)
                 {

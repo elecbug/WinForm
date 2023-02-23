@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GBTH"
+    "\\GBTH",
+    "\\GBTH\\List"
   ],
-  "SelectedNode": "\\GBTH\\MainForm.cs",
+  "SelectedNode": "\\GBTH\\List\\IngredientList.cs",
   "PreviewInSolutionExplorer": false
 }

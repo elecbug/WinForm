@@ -63,11 +63,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
       "projectName": "GBTH",
-      "projectPath": "C:\\Users\\user\\Source\\Repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
+      "projectPath": "C:\\Users\\user\\source\\repos\\elecbug\\CSharp\\GBTH\\GBTH.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Source\\Repos\\elecbug\\CSharp\\GBTH\\obj\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\elecbug\\CSharp\\GBTH\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

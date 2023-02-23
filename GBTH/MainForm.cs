@@ -1,5 +1,4 @@
 using GBTH.List;
-using GBTH.Properties;
 
 namespace GBTH
 {
@@ -12,6 +11,7 @@ namespace GBTH
         private NumericUpDown numeric;
         private Button print;
         private Label label;
+        private Button sync;
 
         public MainForm()
         {
@@ -24,7 +24,7 @@ namespace GBTH
             this.Text = "GBTH";
             this.WindowState = FormWindowState.Maximized;
             this.Font = new Font("굴림체", 13, FontStyle.Regular);
-            this.Icon = Resources.Katty;
+            this.Icon = Properties.Resources.Katty;
 
             this.tool_container = new SplitContainer()
             {
@@ -75,12 +75,22 @@ namespace GBTH
 
             this.label = new Label()
             {
-                Location = new Point(this.numeric.Width * 2 + 15, 5),
+                Location = new Point(this.numeric.Width + 10, this.print.Height + 5),
                 Parent = this.tool_container.Panel1,
                 Size = this.numeric.Size,
                 Visible = true,
                 Text = "",
             };
+
+            this.sync = new Button()
+            {
+                Location = new Point(this.numeric.Width * 2 + 15, 5),
+                Parent = this.tool_container.Panel1,
+                Size = this.numeric.Size,
+                Visible = true,
+                Text = "동기화",
+            };
+            this.sync.Click += SyncClick;
 
             this.list_view = IngredientList.Deserialize(ref this.grid_view, Environment.CurrentDirectory, (int)this.numeric.Value);
             this.list_view.Parent = this.container.Panel1;
@@ -118,7 +128,14 @@ namespace GBTH
         private void PrintClick(object? sender, EventArgs e)
         {
             this.Invoke((MethodInvoker)delegate
-               { this.list_view.Print(this.label); });
+            { 
+                this.list_view.Print(this.label); 
+            });
+        }
+
+        private void SyncClick(object? sender, EventArgs e)
+        {
+
         }
 
         private void PropertiesSave()
