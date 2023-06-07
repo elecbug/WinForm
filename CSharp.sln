@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebita", "Rebita\Rebita.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeUs", "TimeUs\TimeUs.csproj", "{E2CC082E-999F-499D-8EE6-0B2FEAE91497}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multi-minesweeper", "Multi-minesweeper\Multi-minesweeper.csproj", "{512D8E4B-884C-4C29-ABB0-400A8C4A5F98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{E2CC082E-999F-499D-8EE6-0B2FEAE91497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2CC082E-999F-499D-8EE6-0B2FEAE91497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2CC082E-999F-499D-8EE6-0B2FEAE91497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{512D8E4B-884C-4C29-ABB0-400A8C4A5F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{512D8E4B-884C-4C29-ABB0-400A8C4A5F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{512D8E4B-884C-4C29-ABB0-400A8C4A5F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{512D8E4B-884C-4C29-ABB0-400A8C4A5F98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

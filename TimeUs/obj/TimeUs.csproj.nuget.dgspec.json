@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\elecbug\\WinForm\\TimeUs\\TimeUs.csproj": {}
+    "C:\\Users\\user\\Source\\Repos\\elecbug\\WinForm\\TimeUs\\TimeUs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\elecbug\\WinForm\\TimeUs\\TimeUs.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\elecbug\\WinForm\\TimeUs\\TimeUs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\elecbug\\WinForm\\TimeUs\\TimeUs.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\elecbug\\WinForm\\TimeUs\\TimeUs.csproj",
         "projectName": "TimeUs",
-        "projectPath": "C:\\Users\\user\\source\\repos\\elecbug\\WinForm\\TimeUs\\TimeUs.csproj",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\elecbug\\WinForm\\TimeUs\\TimeUs.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\user\\source\\repos\\elecbug\\WinForm\\TimeUs\\obj\\",
         "projectStyle": "PackageReference",
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

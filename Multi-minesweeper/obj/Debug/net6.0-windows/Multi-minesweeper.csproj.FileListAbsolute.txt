@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\bin\Debug\net6.0-windows\Multi-minesweeper.exe
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\bin\Debug\net6.0-windows\Multi-minesweeper.deps.json
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\bin\Debug\net6.0-windows\Multi-minesweeper.runtimeconfig.json
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\bin\Debug\net6.0-windows\Multi-minesweeper.dll
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\bin\Debug\net6.0-windows\Multi-minesweeper.pdb
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\MultiMinesweeper.MainForm.resources
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.csproj.GenerateResource.cache
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.AssemblyInfo.cs
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.dll
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\refint\Multi-minesweeper.dll
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.pdb
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\Multi-minesweeper.genruntimeconfig.cache
+C:\Users\user\source\repos\elecbug\SocketExam\Multi-minesweeper\obj\Debug\net6.0-windows\ref\Multi-minesweeper.dll
